@@ -16,7 +16,11 @@ def gcd_optimized(a, b):
     return gcd_optimized(b, a_prime)
 
 def lcm_optimized(a, b):
-    gcd = gcd_optimized(a, b)
+
+    if a > b:
+        gcd = gcd_optimized(a, b)
+    else:
+        gcd = gcd_optimized(b, a)
 
     return (round((a * b)/gcd))
 
