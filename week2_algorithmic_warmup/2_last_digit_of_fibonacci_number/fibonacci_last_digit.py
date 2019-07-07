@@ -20,11 +20,15 @@ def get_fibonacci_last_digit_optimized(n):
     previous = 0
     current = 1
 
-    for i in range(n - 1):
-        previous, current = current, previous + current
+    for _ in range(n - 1):
+        new = previous + current
+        new = new % 10
+
+        current, previous = new, current
+
+    return current
 
 
 if __name__ == '__main__':
-    input = sys.stdin.read()
-    n = int(input)
-    print(get_fibonacci_last_digit_naive(n))
+    n = int(input())
+    print(get_fibonacci_last_digit_optimized(n))
