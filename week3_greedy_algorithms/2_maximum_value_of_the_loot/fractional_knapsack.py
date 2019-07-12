@@ -1,13 +1,16 @@
 # Uses python3
 import sys
 
+# Creating array of unit value per weight for each object
 def value_per_weight (weights, values):
     vpw = []
 
-    for i in len(weights):
-        vpw[i] = values[i]/weights[i]
+    # Appending corresponding weights and values into one array
+    for i in range(0, len(weights)):
+        vpw.append((values[i], weights[i]))
 
-    vpw.sort(reverse = True)
+    # Sorting based on value/weight
+    vpw.sort(key = lambda x: x[0]/x[1], reverse = True)
 
     return vpw
 
@@ -16,16 +19,18 @@ def get_optimal_value(capacity, weights, values):
     total_weight = capacity
 
     # write your code here
+
+    # Array of all values per unit weight
     vpw = value_per_weight(weights, values)
 
-    for _ in len(values):
-        if capacity == 0:
+    # Loops through and puts in object in knapsack for all objects
+    for obj_value, obj_weight in vpw:
+        if total_weight == 0:
             return value
         else:
-            for i in len(vpw):
-                min_weight = min(weights[i], total_weight)
-                value = value + min_weight * vpw[i]
-                total_weight = total_weight - min_weight
+            min_weight = min(obj_weight, total_weight)
+            value += min_weight * (obj_value/obj_weight)
+            total_weight -= min_weight
 
 
     return value
