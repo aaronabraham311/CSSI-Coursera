@@ -2,22 +2,17 @@
 import sys
 
 def binary_search(a, x):
-    left, right = 0, len(a)
+    left, right = 0, len(a) - 1
 
-    # If element not found
-    if right <= left:
-        return -1
-    else:
-        # Creating middle point
-        mid = round(left + (right-left)/2)
-
-        # Splitting up array and calling function recursively
-        if x == a[mid]:
+    while left <= right:
+        mid = left + (right - left) // 2
+        if a[mid] == x:
             return mid
         elif x < a[mid]:
-            return binary_search(a[0:mid], x)
+            right = mid - 1
         else:
-            return binary_search(a[mid + 1: right], x)
+            left = mid + 1
+    return -1
 
 def linear_search(a, x):
     for i in range(len(a)):
