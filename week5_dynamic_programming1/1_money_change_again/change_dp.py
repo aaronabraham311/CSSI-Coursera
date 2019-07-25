@@ -1,5 +1,6 @@
 # Uses python3
 import sys
+from math import inf
 
 def get_change(m):
     # Creating array to store previous optimal solutions to money changes
@@ -9,7 +10,7 @@ def get_change(m):
     # Loop through money:
     for coin in range(1, m + 1):
         # Making initial solution infinitely large
-        T[coin] = 100
+        T[coin] = inf
 
         # Going through each coin and getting respective change
         # Remember basic change rule: change = (money - denomination) + 1 (+1 for change given)
@@ -21,7 +22,7 @@ def get_change(m):
                 if change < T[coin]:
                     T[coin] = change
 
-    return T[len(T) - 1]
+    return T[m]
 
 
 if __name__ == '__main__':
