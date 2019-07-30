@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d89ec9d-be2d-49d7-809a-328d4d089f84" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week6_dynamic_programming2/1_maximum_amount_of_gold/knapsack.py" afterPath="$PROJECT_DIR$/week6_dynamic_programming2/1_maximum_amount_of_gold/knapsack.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week6_dynamic_programming2/3_maximum_value_of_an_arithmetic_expression/placing_parentheses.py" afterPath="$PROJECT_DIR$/week6_dynamic_programming2/3_maximum_value_of_an_arithmetic_expression/placing_parentheses.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,24 +14,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="knapsack.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/week6_dynamic_programming2/1_maximum_amount_of_gold/knapsack.py">
+      <file leaf-file-name="placing_parentheses.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/week6_dynamic_programming2/3_maximum_value_of_an_arithmetic_expression/placing_parentheses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="795">
+              <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
               <folding>
-                <element signature="e#15#25#0" expanded="true" />
+                <element signature="e#278#298#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_distance.py3" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/week5_dynamic_programming1/3_edit_distance/edit_distance.py3">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="58" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -60,6 +49,7 @@
         <option value="$PROJECT_DIR$/week5_dynamic_programming1/1_money_change_again/change_dp.py" />
         <option value="$PROJECT_DIR$/week5_dynamic_programming1/3_edit_distance/edit_distance.py" />
         <option value="$PROJECT_DIR$/week6_dynamic_programming2/1_maximum_amount_of_gold/knapsack.py" />
+        <option value="$PROJECT_DIR$/week6_dynamic_programming2/3_maximum_value_of_an_arithmetic_expression/placing_parentheses.py" />
       </list>
     </option>
   </component>
@@ -116,7 +106,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="1_maximum_amount_of_gold" />
+              <option name="myItemId" value="3_maximum_value_of_an_arithmetic_expression" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -609,6 +599,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/week6_dynamic_programming2/1_maximum_amount_of_gold/knapsack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/week5_dynamic_programming1/3_edit_distance/edit_distance.py3">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -617,12 +617,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week6_dynamic_programming2/1_maximum_amount_of_gold/knapsack.py">
+    <entry file="file://$PROJECT_DIR$/week6_dynamic_programming2/3_maximum_value_of_an_arithmetic_expression/placing_parentheses.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="795">
+          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
           <folding>
-            <element signature="e#15#25#0" expanded="true" />
+            <element signature="e#278#298#0" expanded="true" />
           </folding>
         </state>
       </provider>
