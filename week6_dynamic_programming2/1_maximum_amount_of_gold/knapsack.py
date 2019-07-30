@@ -1,14 +1,10 @@
 # Uses python3
 import sys
+import numpy as np
 
 def optimal_weight(W, w, n):
     # Creating a dynamic programming array to store all optimal solutions for all weights <= W
-    dp = [None] * (n + 1)
-
-    # Initializing values for first row and column
-    for i in range(0, n + 1):
-        dp[0, i] = 0
-        dp[i, 0] = 0
+    dp = np.zeros(shape = (n, W + 1), dtype = int)
 
     '''
     LOGIC:
@@ -19,11 +15,14 @@ def optimal_weight(W, w, n):
     '''
 
     # Creating loop to run through all possible sub-weights
-    for i in range (1, n + 1):
-        for sub_weight in range (1, W + 1):
-            
+    for j in range (0, n):
+        for i in range (1, W + 1):
+            if w[j] > i:
+                dp[j, i] = dp[j - 1, i]
+            else:
+                dp[j, i] = max(w[j] + dp[j - 1, i - w[j]], dp[j - 1, i])
 
-    return result
+    return dp[len(w) - 1, W]
 
 if __name__ == '__main__':
     input = sys.stdin.read()
