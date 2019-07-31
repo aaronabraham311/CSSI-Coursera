@@ -35,12 +35,8 @@ def min_max(i, j, m, M, op):
 
     return(temp_min, temp_max)
 
-def get_maximum_value(dataset):
-
-    # Splitting input into operations and numbers
-    op = dataset[1: len(dataset): 2]
-    d = dataset[1: len(dataset) + 1: 2]
-    n = len(d)
+def get_maximum_value(operators, digits):
+    n = len(digits)
 
     # Initializing arrays that store minimum and maximum arrays
     m = np.zeros(shape = (n, n), dtype = int)
@@ -48,17 +44,29 @@ def get_maximum_value(dataset):
 
     # Initializing subexpressions of length 1 (diagonal):
     for i in range (0, n):
-        m[i, i] = int(d[i])
-        M[i, i] = int(d[i])
+        m[i, i] = digits[i]
+        M[i, i] = digits[i]
 
     # Filling in arrays
     for s in range (1, n):
-        for i in range (n - s):
+        for i in range (0, n - s):
             j = i + s
-            m[i, j], M[i, j] = min_max(i, j, m, M, op)
+            m[i, j], M[i, j] = min_max(i, j, m, M, operators)
 
     return M[0, n - 1]
 
 
 if __name__ == "__main__":
-    print(get_maximum_value(input()))
+
+    # Getting expression and splitting into operators and digits
+    expression = input()
+
+    operators, digits = [], []
+
+    for i in expression:
+        if i in ['+', '-', '*']:
+            operators.append(i)
+        else:
+            digits.append(int(i))
+
+    print(get_maximum_value(operators, digits))
